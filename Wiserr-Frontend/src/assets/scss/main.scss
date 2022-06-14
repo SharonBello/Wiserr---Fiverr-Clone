@@ -1,0 +1,53 @@
+// SETUP
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import './setup/functions';
+@import './setup/typography';
+@import './setup/variables';
+@import './setup/reset';
+@import './setup/mixins';
+
+// BASICS
+@import './basics/helpers';
+@import './basics/base';
+@import './basics/layout';
+
+// COMPONENTS
+@import './components/app-header';
+@import './components/nav-categories';
+@import './components/profile-menu';
+@import './components/footer';
+@import './components/filters';
+@import './components/results-breadcrumbs';
+@import './components/gig-list';
+@import './components/gig-preview';
+@import './components/gig-review';
+@import './components/user-profile';
+@import './components/budget-filter';
+@import './components/search';
+@import './components/side-menu';
+@import './components/loader';
+
+// HOMEPAGE
+// HOMEPAGE-HEADERS
+@import './components/homepage/hero';
+
+// HOMEPAGE-SECTIONS
+@import './components/homepage/selling-point';
+@import './components/homepage/icon-categories';
+@import './components/homepage/categories-carousel';
+@import './components/homepage/testimonials';
+@import './components/homepage/seller-section';
+
+// seller
+@import './components/seller/seller-homepage';
+// @import './components/seller/seller-header';
+// @import './components/seller/seller-hero';
+// @import './components/seller/seller-homepage-header';
+@import './components/seller/seller-dashboard';
+
+// PAGES
+@import './pages/add-gig';
+@import './pages/homepage';
+@import './pages/gig-details';
+@import './pages/login-signup';
+

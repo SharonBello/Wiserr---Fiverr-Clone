@@ -1,0 +1,168 @@
+.seller-info-container {
+    background-color: #0d084d;
+    color: $grey_1000;
+    padding-bottom: rem(96px);
+    padding-top: rem(96px);
+
+    .wiserr-seller-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        & h2 {
+            margin-right: rem(10px);
+            margin-left: -5px;
+            padding: 0;
+            font-weight: 300;
+            font-size: rem(28px);
+        }
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: rem(3px) rem(7px) rem(3px);
+            border-width: rem(1px);
+            border-style: solid;
+            text-align: center;
+            color: $white;
+            font-size: rem(12px);
+            font-weight: 700;
+            line-height: 100%;
+            border-radius: em(999px);
+            border-color: #584aff;
+            text-transform: uppercase;
+            background: #584aff;
+        }
+    }
+
+    .seller-container-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "seller-text seller-image";
+        vertical-align: middle;
+        align-items: center;
+        padding: 0;
+
+        .seller-text {
+            color: $white;
+            overflow-wrap: break-word;
+
+            & p {
+                padding-right: em(200px);
+                font-size: rem(18px);
+                line-height: rem(26px);
+                color: $white;
+                margin-top: 1em;
+            }
+
+            ul {
+                color: $white;
+                list-style: none;
+                list-style-image: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    color: $white;
+                    list-style: none;
+                    list-style-image: none;
+                    margin: 0;
+                    padding: 0;
+
+                    h6 {
+                        display: flex;
+                        align-items: center;
+                        font-size: rem(16px);
+                        font-weight: 300;
+                        margin: 0;
+                        padding: 0;
+
+                        .check-icon {
+                            margin: 0;
+                            padding: 0;
+                            margin-right: rem(10px);
+                            padding-top: rem(8px);
+                        }
+                    }
+                }
+            }
+
+            .explore-seller-container {
+                margin-top: em(48px);
+
+                & a {
+                    background-color: $wiserr_green;
+                    border-radius: 4px;
+                    color: $white;
+                    cursor: pointer;
+                    padding: 12px 24px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 70ms cubic-bezier(.75, 0, .25, 1);
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background-color: $wiserr_success;
+                        outline: none;
+                    }
+
+                    &:active {
+                        background-color: #188652;
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .font-domaine {
+            line-height: rem(24px);
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            font-size: rem(32px);
+
+            & span {
+                font-weight: bold;
+                font-weight: 700;
+                line-height: 120%;
+
+                & .seller-text {
+                    font-family: DomaineDisplay;
+                    font-size: 32px;
+                    font-style: italic;
+                    line-height: rem(24px);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .seller-info-container {
+        position: relative;
+        // left: 11%;
+    }
+    .seller-info-container .seller-container-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .seller-info-container .seller-container-grid .seller-text {
+        position: relative;
+        left: 6%;
+    }
+}
+@media (max-width:744px) {
+    .seller-info-container .seller-container-grid .seller-text {
+        overflow-wrap: unset;
+    }
+    .seller-info-container .seller-container-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}

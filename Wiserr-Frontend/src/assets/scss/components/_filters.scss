@@ -1,0 +1,144 @@
+.filter-topbar {
+    width: 100%;
+    margin-top: 1.3em;
+
+    .filter-shadow-effect {
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        &.open {
+            gap: 0px;
+            z-index: 160;
+        }
+
+        .filters-only {
+            align-items: center;
+            gap: rem(16px);
+        }
+
+        .filter-floating-menu {
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: rem(150px);
+
+            .filter-menu-title {
+                font-size: 16px;
+                font-weight: 600;
+                transition: border-color .12s cubic-bezier(.215, .61, .355, 1);
+                transition: border-color .12s cubic-bezier(.215, .61, .355, 1);
+                padding: 6px 15px;
+                border: 1px solid $grey_500;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: 600;
+                color: $grey_1100;
+                white-space: nowrap;
+
+                &.open {
+                    margin-right: 50%;
+                }
+
+                &::after {
+                    content: "\f107";
+                    font-family: awesome;
+                    margin: 0 rem(10px);
+                }
+            }
+
+            .floating-menu-open {
+                font-size: 16px;
+                line-height: 120%;
+                font-weight: 700;
+                position: relative;
+                margin: 0 6px;
+                padding: 10px 0;
+                display: relative;
+                position: absolute;
+                visibility: visible;
+            }
+        }
+
+        .sort-by-container {
+            font-size: 16px;
+            line-height: 120%;
+            font-weight: 700;
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: 150;
+
+            .pre-title {
+                margin-right: rem(10px);
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.close-btn {
+    // font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    user-select: none;
+    padding: 6px 24px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.apply-filters-btn {
+    background-color: $wiserr_green;
+    padding: 4px 12px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+.deliveryTime-filter {
+    flex-direction: column;
+    border: 1px solid $grey_500;
+    padding: rem(20px) rem(40px);
+    margin-top: 10px;
+    white-space: nowrap;
+    z-index: 5;
+    background-color: $white;
+    position: absolute;
+    gap: rem(16px);
+    font-size: rem(18px);
+
+    .input-wrapper {
+        white-space: nowrap;
+        gap: rem(18px);
+
+        input {
+            width: 40px;
+            font-size: rem(16px);
+            padding: rem(4px) rem(32px);
+        }
+    }
+
+    .btn-deliveryTime {
+        margin-top: rem(10px);
+        display: flex;
+        justify-content: space-between;
+
+        .apply-filters-btn {
+            background-color: $wiserr_green;
+            color: #fff;
+            padding: rem(8px) rem(18px);
+            border-radius: 4px;
+            border: none;
+        }
+
+        .close-btn {
+            border: none;
+            background-color: transparent;
+            font-size: rem(18px);
+            color: $grey_800;
+        }
+    }
+}

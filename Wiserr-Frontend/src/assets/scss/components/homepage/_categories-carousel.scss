@@ -1,0 +1,106 @@
+.gig-slider-container {
+    margin-top: rem(100px);
+    margin-bottom: rem(60px);
+
+    & h2 {
+        color: $grey_1100;
+        padding-bottom: rem(18px);
+        font-size: rem(32px);
+        line-height: 120%;
+        font-weight: 700;
+        letter-spacing: rem(1.3px);
+    }
+
+    .slider-container {
+        display: grid;
+        grid-template-columns: repeat(5 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "slide1 slide2 slide3 slide4 slide5";
+        padding: 0;
+    }
+    
+    .slide {
+        aspect-ratio: 1 / 0.8;
+    }
+    
+    @media screen and (min-width: 600px) {
+        .slide{
+            aspect-ratio: 1 / 0.8;
+        } 
+    }
+    
+    @media screen and (min-width: 900px) {
+        .slide{
+            aspect-ratio: 1 / 0.84;
+        }
+    } 
+    
+    @media screen and (min-width: 1180px) {
+        .slide{
+            aspect-ratio: 1 / 0.83;
+        }
+    } 
+    
+    @media screen and (min-width: 1400px) {
+        .slide:not(:first-of-type) {
+            width: 100%;
+            aspect-ratio: 1 / 0.79;
+            padding-left: rem(32px);
+            
+            &:first-of-type {
+                width: 100%;
+                padding: 0;
+                padding-right: rem(16px);
+                aspect-ratio: 1 / 0.79;
+
+            }
+        } 
+    }
+
+    h4 {
+        position: absolute;
+        z-index: 55;
+        color: $white;
+        padding: rem(16px);
+        cursor: pointer;
+
+        & span {
+            font-size: rem(24px);
+            line-height: rem(32px);
+            font-weight: 700;
+        }
+
+        & small {
+            font-size: rem(14px) !important;
+            line-height: rem(20px);
+            font-weight: 400 !important;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .gig-slider-container .slider-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .professional-services {
+        margin-left: 12%;
+    }
+}
+@media (max-width:744px) {
+    .gig-slider-container .slider-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:1024px) {
+    .gig-slider-container .slider-container {
+        display: flex;
+        gap: 15px;
+    }
+    .gig-slider-container h4 span {
+        font-size: 1rem;
+    }
+}
